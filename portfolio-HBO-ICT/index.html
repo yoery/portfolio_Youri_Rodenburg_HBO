@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Youri Rodenburg – UX/UI Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0b0b;
+color:white;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+background:#0b0b0b;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid rgba(255,255,255,0.1);
+z-index:10;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+opacity:0.7;
+}
+
+nav a:hover{
+opacity:1;
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+opacity:0.7;
+max-width:500px;
+}
+
+/* SECTIONS */
+
+section{
+max-width:1000px;
+margin:auto;
+padding:100px 20px;
+}
+
+/* GLASS UI */
+
+.glass{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+border-radius:14px;
+padding:40px;
+margin-bottom:60px;
+}
+
+/* PROJECT CARDS */
+
+.projects-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.project-card{
+transition:0.3s;
+cursor:pointer;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-card img{
+width:100%;
+border-radius:10px;
+margin-top:20px;
+}
+
+/* CASE STUDY */
+
+.case-study img{
+width:100%;
+margin-top:20px;
+border-radius:10px;
+}
+
+/* BUTTON */
+
+.button{
+display:inline-block;
+margin-top:20px;
+padding:12px 22px;
+border:1px solid white;
+border-radius:6px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.button:hover{
+background:white;
+color:black;
+}
+
+/* REVEAL ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+animation:fadeUp linear forwards;
+animation-timeline:view();
+animation-range:entry 10% cover 40%;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.projects-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div><strong>Youri Rodenburg</strong></div>
+
+<div>
+<a href="#projects">Projecten</a>
+<a href="#about">Over mij</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>UX/UI Designer Portfolio</h1>
+
+<p>
+Ik ontwerp gebruiksvriendelijke digitale producten met een focus
+op UX, structuur en consistente interfaces.
+</p>
+
+</div>
+
+<!-- PROJECT OVERVIEW -->
+
+<section id="projects">
+
+<h2>Projecten</h2>
+
+<div class="projects-grid">
+
+<div class="glass project-card reveal" onclick="location.href='#project1'">
+
+<h3>Vergader App</h3>
+
+<p>Een app om meetings eenvoudig te plannen.</p>
+
+<img src="images/project1.jpg">
+
+</div>
+
+<div class="glass project-card reveal" onclick="location.href='#project2'">
+
+<h3>Project 2</h3>
+
+<p>Korte beschrijving van je tweede project.</p>
+
+<img src="images/project2.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECT 1 CASE STUDY -->
+
+<section id="project1" class="case-study">
+
+<div class="glass reveal">
+
+<h1>Vergader App</h1>
+
+<p>Een applicatie om meetings overzichtelijk te plannen.</p>
+
+<p>
+<strong>Mijn rol:</strong> UI/UX Designer<br>
+<strong>Team:</strong> 3 developers<br>
+<strong>Tools:</strong> Figma, Miro
+</p>
+
+</div>
+
+<div class="glass reveal">
+
+<h2>Probleem</h2>
+
+<p>
+Veel teams gebruiken meerdere tools voor planning,
+waardoor meetings moeilijk overzichtelijk blijven.
+</p>
+
+</div>
+
+<div class="glass reveal">
+
+<h2>Doelgroep</h2>
+
+<ul>
+<li>Studenten</li>
+<li>Projectteams</li>
+<li>Organisaties</li>
+</ul>
+
+<img src="images/persona.jpg">
+
+</div>
+
+<div class="glass reveal">
+
+<h2>Requirements</h2>
+
+<h3>Must</h3>
+
+<ul>
+<li>Meeting aanmaken</li>
+<li>Deelnemers toevoegen</li>
+</ul>
+
+<h3>Should</h3>
+
+<ul>
+<li>Overzicht meetings</li>
+</ul>
+
+<h3>Could</h3>
+
+<ul>
+<li>Notificaties</li>
+</ul>
+
+</div>
+
+<div class="glass reveal">
+
+<h2>User Flow</h2>
+
+<img src="images/userflow.png">
+
+</div>
+
+<div class="glass reveal">
+
+<h2>Wireframes</h2>
+
+<img src="images/wireframes.png">
+
+</div>
+
+<div class="glass reveal">
+
+<h2>Hi-Fi Design</h2>
+
+<img src="images/hifi.png">
+
+</div>
+
+<div class="glass reveal">
+
+<h2>Testen</h2>
+
+<ul>
+<li>Gebruikers konden snel meetings plannen</li>
+<li>Navigatie werd duidelijk gevonden</li>
+</ul>
+
+</div>
+
+<div class="glass reveal">
+
+<h2>Iteraties</h2>
+
+<img src="images/iteration.png">
+
+</div>
+
+<div class="glass reveal">
+
+<h2>Eindresultaat</h2>
+
+<a href="#" class="button">Bekijk Prototype</a>
+
+</div>
+
+<div class="glass reveal">
+
+<h2>Reflectie</h2>
+
+<p>
+Tijdens dit project heb ik geleerd hoe belangrijk
+gebruikersfeedback is voor het verbeteren van UX.
+</p>
+
+</div>
+
+</section>
+
+<!-- PROJECT 2 (KOPIE VAN TEMPLATE) -->
+
+<section id="project2" class="case-study">
+
+<div class="glass reveal">
+
+<h1>Project 2</h1>
+
+<p>Beschrijving van je tweede project.</p>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="glass reveal">
+
+<h2>Over mij</h2>
+
+<p>
+Ik ben een HBO-ICT student met interesse in UX design
+en front-end development. Mijn focus ligt op het ontwerpen
+van gebruiksvriendelijke interfaces.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="glass reveal">
+
+<h2>Contact</h2>
+
+<p>Email: youri@email.com</p>
+
+<p>LinkedIn: link</p>
+
+<p>GitHub: link</p>
+
+</div>
+
+</section>
+
+</body>
+</html>
