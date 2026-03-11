@@ -76,7 +76,7 @@ padding:100px 20px;
 
 .glass{
 background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
+border:1px solid rgba(233, 8, 177, 0.1);
 backdrop-filter:blur(10px);
 border-radius:14px;
 padding:40px;
@@ -140,8 +140,8 @@ transition:0.3s;
 }
 
 .button:hover{
-background:white;
-color:black;
+background:purple;
+color:white;
 }
 
 /* REVEAL ANIMATION */
